@@ -51,6 +51,18 @@ For direct testing, point your test suite at the `/chat` endpoint (GET or POST f
 - **Shopify Integration**: [@shopify/shopify-app-remix](https://www.npmjs.com/package/@shopify/shopify-app-remix)
 - **Database**: SQLite (via Prisma) for session storage
 
+## Configuration
+Create a `.env` file based on `.env.example` and provide the necessary keys.
+
+```
+ELEVENLABS_API_KEY=your-elevenlabs-key
+ELEVENLABS_AGENT_ID=your-agent-id
+CLAUDE_API_KEY=your-claude-key
+LLM_PROVIDER=elevenlabs
+```
+
+Set `LLM_PROVIDER` to `anthropic` if you prefer to use Claude instead.
+
 ## Customizations
 This repo can be customized. You can:
 - Edit the prompt

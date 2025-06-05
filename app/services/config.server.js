@@ -6,6 +6,7 @@
 export const AppConfig = {
   // API Configuration
   api: {
+    llmProvider: process.env.LLM_PROVIDER || 'elevenlabs',
     defaultModel: 'claude-3-5-sonnet-latest',
     maxTokens: 2000,
     defaultPromptType: 'standardAssistant',
@@ -15,11 +16,11 @@ export const AppConfig = {
   errorMessages: {
     missingMessage: "Message is required",
     apiUnsupported: "This endpoint only supports server-sent events (SSE) requests or history requests.",
-    authFailed: "Authentication failed with Claude API",
+    authFailed: "Authentication failed with LLM API",
     apiKeyError: "Please check your API key in environment variables",
     rateLimitExceeded: "Rate limit exceeded",
     rateLimitDetails: "Please try again later",
-    genericError: "Failed to get response from Claude"
+    genericError: "Failed to get response from the AI provider"
   },
 
   // Tool Configuration
